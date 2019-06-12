@@ -25,8 +25,8 @@ public class UserRecyclerAdapter extends
 
     public UserRecyclerAdapter(Context context, List<User> users){
        this.mContext = context;
-              this.mUsers = users;
-        this.mlayoutInflater = LayoutInflater.from(context);
+       this.mUsers = users;
+       this.mlayoutInflater = LayoutInflater.from(context);
     }
 
 

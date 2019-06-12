@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.a3line.usersapp">
 
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"> </uses-permission>
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,17 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".views.DeviceCamera"
-            android:label="@string/title_activity_device_camera"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".views.UserDetail" />
-        <activity android:name=".views.RegisterUser"></activity>
+        <activity android:name=".views.RegisterUser" />
 
-        <service android:name=".services.UserWebServiceImpl" android:exported="false" />
-        <service android:name=".services.UserServiceOkHttp" />
-
+        <service
+            android:name=".services.UserServiceOkHttp"
+            android:exported="false" />
     </application>
-
 
 </manifest>

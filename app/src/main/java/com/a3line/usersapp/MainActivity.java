@@ -8,18 +8,21 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.a3line.usersapp.models.User;
 import com.a3line.usersapp.presenter.UserRecyclerAdapter;
 import com.a3line.usersapp.services.UserServiceOkHttp;
 import com.a3line.usersapp.utils.NetworkHelper;
+import com.a3line.usersapp.views.RegisterUser;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    List<User> mUsers;
+    public static List<User> mUsers;
     RecyclerView mRecyclerView;
     UserRecyclerAdapter mUserRecyclerAdapter;
     boolean networkOk;
@@ -69,10 +72,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
     private void requestData() {
         Intent intent = new Intent(this, UserServiceOkHttp.class);
         startService(intent);
 
     }
 
+    public void startRegistration(MenuItem item) {
+        Intent intent = new Intent(this, RegisterUser.class);
+        startActivity(intent);
+    }
 }
