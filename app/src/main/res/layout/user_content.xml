@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="16dp">
+
+
+        <LinearLayout
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+
+            <TextView
+                android:id="@+id/full_name_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                app:layout_constraintStart_toEndOf="@id/full_name_holder"
+                tools:targetApi="lollipop" />
+
+
+                        <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Email"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                app:layout_constraintStart_toEndOf="@id/user_name"
+                tools:targetApi="lollipop" />
+        </LinearLayout>
+
+
+        />
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</FrameLayout>
