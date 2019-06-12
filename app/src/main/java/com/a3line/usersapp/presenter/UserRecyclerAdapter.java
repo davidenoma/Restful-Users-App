@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.a3line.usersapp.R;
 import com.a3line.usersapp.views.UserDetail;
@@ -58,6 +59,7 @@ public class UserRecyclerAdapter extends
                     }
                 });
 
+        Toast.makeText(mContext, user.getName(), Toast.LENGTH_SHORT).show();
 
     }
 
